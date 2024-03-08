@@ -19,8 +19,7 @@
         // return the result
         echo "This method is not post";
     }
-    $bigId = ($_GET['author_id']);
-    echo $bigId . " is the big id"; */
+    
     function isValid($theId, $theModel) {
 
     } 
