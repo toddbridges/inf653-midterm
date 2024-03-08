@@ -48,7 +48,8 @@ if($num > 0) {
 
     //turn to json
     // echo json_encode($quotes_arr);
-    return json_encode($quotes_arr);
+    $jsonArray = json_encode($quotes_arr);
+    return $jsonArray;
 } else {
     // no posts to show
     echo json_encode(
