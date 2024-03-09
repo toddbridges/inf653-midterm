@@ -1,6 +1,7 @@
 <?php
-    //header('Access-Control-Allow-Origin: *');
-    header('Access-Control-Allow-Origin: https://walrus-app-45hlu.ondigitalocean.app/api');
+
+    header('Access-Control-Allow-Origin: *');
+    header ('Access-Control-Allow-Credentials: true');
     header('Content-Type: application/json');
     $method = $_SERVER['REQUEST_METHOD'];
 
