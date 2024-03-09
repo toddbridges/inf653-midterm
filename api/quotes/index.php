@@ -14,15 +14,21 @@
 
     include_once '../../config/Database.php';
     include_once '../../models/Quote.php';
-
-    //instantiate db and connect
-    $database = new Database();
-    $db = $database->connect();
-
-    // Instantiate author object
-    $quote = new Quote($db);
+    include_once '../../functions/isValid.php';
+    include_once 'read_single.php';
 
     
+    //$database = new Database();
+    //$db = $database->connect();
+
+    // Instantiate author object
+    //$quote = new Quote($db);
+
+
+    // get author 
+    //$quote->read_single();
+    //$quote->isValid($data->id, )
+
 
     
     /* echo $data->id . " IS THE DATA ID";       

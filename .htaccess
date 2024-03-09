@@ -1,1 +1,5 @@
-PORT "5432"
+SetEnv USERNAME "tbridges"
+SetEnv PASSWORD "fSKlrQsCFpxc6NTiUh4iEHoAWsy0Qj6c"
+SetEnv DBNAME "quotesdb_obxm"
+SetEnv HOST "dpg-cnahoha1hbls7395k0fg-a.ohio-postgres.render.com"
+SetEnv PORT "5432"
