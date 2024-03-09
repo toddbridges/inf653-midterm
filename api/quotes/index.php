@@ -12,6 +12,16 @@
 
     $data = json_decode(file_get_contents("php://input"));
 
+    include_once '../../config/Database.php';
+    include_once '../../models/Quote.php';
+
+    //instantiate db and connect
+    $database = new Database();
+    $db = $database->connect();
+
+    // Instantiate author object
+    $quote = new Quote($db);
+
     
 
     
@@ -19,17 +29,7 @@
     echo $data->quote . " is the quote";
     $data->author_id;
     $data->category_id; */
-    /* if($method != 'POST') {
-        // set the id on the model
-        // call the read single method from the model
-        // return the result
-        echo "This method is not post";
-    }
     
-    function isValid($theId, $theModel) {
-
-    } 
-    */
 
 
     if ($method == 'GET') {
