@@ -51,14 +51,3 @@ if($quote->update()) {
         array('message' => 'quote_id Not Found')
     );
 }
-
-/* try{
-    if($stmt->execute()) {
-        return true;
-    } // print error if something goes wrong
-    printf("Error: %s.\n", $stmt->error);
-
-    return false;
-} catch (Exception $e) {
-    echo "author_id Not Found";
-}  */
