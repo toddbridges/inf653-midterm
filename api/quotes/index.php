@@ -1,7 +1,7 @@
 <?php
 
     header('Access-Control-Allow-Origin: *');
-    header ('Access-Control-Allow-Credentials: true');
+    
     header('Content-Type: application/json');
     $method = $_SERVER['REQUEST_METHOD'];
 
@@ -12,6 +12,12 @@
     }
 
     $data = json_decode(file_get_contents("php://input"));
+
+    if($method == 'PUT') {
+        if(!data->author_id){
+            echo "author_id not found";
+        }
+    }
 
     
     /* echo $data->id . " IS THE DATA ID";       
