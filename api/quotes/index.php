@@ -1,7 +1,7 @@
 <?php
 
     header('Access-Control-Allow-Origin: *');
-    header ('Access-Control-Allow-Credentials: false');
+    header ('Access-Control-Allow-Credentials: true');
     header('Content-Type: application/json');
     $method = $_SERVER['REQUEST_METHOD'];
 
@@ -14,10 +14,10 @@
     $data = json_decode(file_get_contents("php://input"));
 
     
-    echo $data->id . " IS THE DATA ID";       
+    /* echo $data->id . " IS THE DATA ID";       
     echo $data->quote . " is the quote";
     $data->author_id;
-    $data->category_id;
+    $data->category_id; */
     /* if($method != 'POST') {
         // set the id on the model
         // call the read single method from the model
