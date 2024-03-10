@@ -9,6 +9,9 @@
         exit();
     }
 
+    $data = json_decode(file_get_contents("php://input"));
+    
+
     if ($method == 'GET') {
         if (isset($_GET['id'])) {
             include_once 'read_single.php';

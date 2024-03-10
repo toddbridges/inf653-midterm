@@ -30,7 +30,7 @@ $num = $result->rowCount();
 if($num > 0) {
 // 
     $quotes_arr = array();
-    $quotes_arr['data'] = array();
+    // $quotes_arr['data'] = array();
 
     while($row = $result->fetch(PDO::FETCH_ASSOC)){
         extract($row);
@@ -42,7 +42,8 @@ if($num > 0) {
         );
 
         //push to 'data'
-        array_push($quotes_arr['data'], $quote_item);
+        array_push($quotes_arr, $quote_item);
+        // was this ....array_push($quotes_arr['data'], $quote_item);
 
     }
 
