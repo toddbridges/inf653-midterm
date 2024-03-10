@@ -12,6 +12,7 @@
         public function __construct($db) {
             $this->conn = $db;
         }
+        
 
         // get authors
         public function read() {
@@ -21,7 +22,9 @@
                 FROM ' . $this->table;
 
             // prepare statments;
+            
             $stmt = $this->conn->prepare($query);
+            
 
             // excetute
             $stmt->execute();
