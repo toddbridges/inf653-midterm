@@ -18,7 +18,7 @@ $author = new Author($db);
 //get raw posted data
 $data = json_decode(file_get_contents("php://input"));
 
-if(empty($data->author_id)) {
+if(empty($data->id)) {
     echo "author_id Not Found";
     return;
 }
