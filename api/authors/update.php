@@ -19,7 +19,9 @@ $author = new Author($db);
 $data = json_decode(file_get_contents("php://input"));
 
 if(empty($data->id)) {
-    echo "author_id Not Found";
+    echo json_encode(
+        array('message' => 'author_id Not Found')
+    );
     return;
 }
 

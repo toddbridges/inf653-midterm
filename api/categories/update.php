@@ -19,7 +19,9 @@ $category = new Category($db);
 $data = json_decode(file_get_contents("php://input"));
 
 if(empty($data->category)) {
-    echo "category_id Not Found";
+    echo json_encode(
+        array('message' => 'category_id Not Found')
+    );
     return;
 }
 // set ID to update

@@ -19,17 +19,23 @@ $quote = new Quote($db);
 $data = json_decode(file_get_contents("php://input"));
 
 if(empty($data->author_id)) {
-    echo "Missing Required Parameters";
+    echo json_encode(
+        array('message' => 'Missing Required Parameters')
+    );
     return;
 } 
 
 if(empty($data->quote)) {
-    echo "Missing Required Parameters";
+    echo json_encode(
+        array('message' => 'Missing Required Parameters')
+    );
     return;
 } 
 
 if(empty($data->category_id)) {
-    echo "Missing Required Parameters";
+    echo json_encode(
+        array('message' => 'Missing Required Parameters')
+    );
     return;
 } 
 
