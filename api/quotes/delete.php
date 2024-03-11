@@ -18,14 +18,14 @@ $quote = new Quote($db);
 //get raw posted data
 $data = json_decode(file_get_contents("php://input"));
 
-// set ID to update
+// set ID to delete
 $quote->id = $data->id;
 
 // delete quote
 // 'quote has been deleted'
 if($quote->delete()) {
     echo json_encode(
-        array('message' => $quote->id)
+        array('id' => $data->id)
     );
 }else {
     echo json_encode(
