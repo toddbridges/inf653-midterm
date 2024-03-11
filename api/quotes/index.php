@@ -39,19 +39,19 @@
 
 
     if ($method == 'GET') {
-        if (isset($_GET['id'])) {
-            include_once 'read_single.php';
-        } else if (isset($_GET['author_id'])){ 
-            include_once 'read.php';
-        } else if (isset($_GET['category_id'])){ 
-            include_once 'read.php';
-        } else {
-            include_once 'read.php';
-        } 
-    } else if($method == 'POST') {
-        include_once 'create.php';
-    } else if ($method == 'PUT') {
-        include_once 'update.php';
-    } else if ($method == 'DELETE') {
-        include_once 'delete.php';
-    }
+         if (isset($_GET['id'])) {
+             include_once 'read_single.php';
+         } else if (isset($_GET['author_id'])){ 
+             include_once 'read.php';
+         } else if (isset($_GET['category_id'])){ 
+             include_once 'read.php';
+         } else {
+             include_once 'read.php';
+         } 
+     } else if($method == 'POST') {
+         include_once 'create.php';
+     } else if ($method == 'PUT') {
+         include_once 'update.php';
+     } else if ($method == 'DELETE') {
+         include_once 'delete.php';
+     }
