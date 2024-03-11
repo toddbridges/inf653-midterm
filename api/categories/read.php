@@ -22,7 +22,7 @@ $num = $result->rowCount();
 if($num > 0) {
 // 
     $categories_arr = array();
-    $categories_arr['data'] = array();
+    // $categories_arr['data'] = array();
 
     while($row = $result->fetch(PDO::FETCH_ASSOC)){
         extract($row);
@@ -32,7 +32,7 @@ if($num > 0) {
         );
 
         //push to 'data'
-        array_push($categories_arr['data'], $category_item);
+        array_push($categories_arr, $category_item);
 
     }
 
