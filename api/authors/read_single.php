@@ -28,7 +28,9 @@ $author->read_single();
     );
 
     if(!$author->author) {
-        echo "author_id Not Found";
+        echo json_encode(
+            array('message' => 'author_id Not Found')
+        );
     } else {
 
     // make json

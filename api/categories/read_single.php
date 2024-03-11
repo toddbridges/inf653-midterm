@@ -26,7 +26,9 @@ $category->read_single();
     );
 
     if(!$category->category) {
-        echo "category_id Not Found";
+        echo json_encode(
+            array('message' => 'category_id Not Found')
+        );
     } else {
 
     // make json
