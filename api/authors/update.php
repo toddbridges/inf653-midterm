@@ -20,7 +20,7 @@ $data = json_decode(file_get_contents("php://input"));
 
 if(empty($data->id)) {
     echo json_encode(
-        array('message' => 'author_id Not Found')
+        array('message' => 'Missing Required Parameters')
     );
     return;
 }
