@@ -32,7 +32,9 @@ $quote->read_single();
     );
 
     if(!$quote->quote) {
-        echo "No Quotes Found";
+        echo json_encode(
+            array('message' => 'No Quotes Found')
+        );
     } else {
 
     // make json
