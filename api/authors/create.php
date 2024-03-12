@@ -18,20 +18,6 @@ $author = new Author($db);
 //get raw author data
 $data = json_decode(file_get_contents("php://input"));
 
-$parameters = true;  // setting a bool to test for existence of data  adjusting 21- 34
-if(!$data->id) {
-    $parameters = false;
-}
-if(!$data->author) {
-    $parameters = false;
-}
-
-if($parameters == false) {
-    echo json_encode(
-        array('message', 'Missing Required Parameters')
-    );
-    return;
-}
 
 // $author->id = $data->id;       
 $author->author = $data->author;
