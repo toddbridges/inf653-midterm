@@ -31,8 +31,8 @@ if($theNewId = $author->create()) {
     echo json_encode(
         array('id' => $theNewId, 'author' => $author->author)
     );
-}else {
+}else {  // changed from authors not created
     echo json_encode(
-        array('message' => 'Author not created')
+        array('message' => 'Missing Required Parameters')
     );
 }

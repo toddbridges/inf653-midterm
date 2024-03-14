@@ -18,14 +18,12 @@
     $theData = json_decode(file_get_contents("php://input"));
     
 
-    
-    if(($method == 'POST') && (!$theData->author)) {
+    // Wednesday 3/13 change. Didn't work.
+/*     if(($method == 'POST') && (!$theData->author)) {
         echo json_encode(
             array('message' => 'Missing Required Parameters')
         );
-    }
-    
-
+    } */
     
 
     if ($method == 'GET') {
