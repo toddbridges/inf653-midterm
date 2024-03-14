@@ -10,32 +10,6 @@
         exit();
     }
 
-    /* $data = json_decode(file_get_contents("php://input"));
-
-    include_once '../../config/Database.php';
-    include_once '../../models/Quote.php';
-    include_once '../../functions/isValid.php';
-    include_once 'read_single.php'; */
-
-    
-    //$database = new Database();
-    //$db = $database->connect();
-
-    // Instantiate author object
-    //$quote = new Quote($db);
-
-
-    // get author 
-    //$quote->read_single();
-    //$quote->isValid($data->id, )
-
-
-    
-    /* echo $data->id . " IS THE DATA ID";       
-    echo $data->quote . " is the quote";
-    $data->author_id;
-    $data->category_id; */
-
 
         // beginning of change
 /*         require_once '../../models/Author.php';
@@ -43,19 +17,23 @@
         $db = new Database();
         $conn = $db->connect();
     
-        $theData = json_decode(file_get_contents("php://input"));
-        $theData->id;
+        $data = json_decode(file_get_contents("php://input"));
+        if(isset($data->author_id)) {
     
-        $auth = new Author( $conn );
-        $sql = 'SELECT * from authors where id = ' . $theData->id;
-        $st = $conn->prepare($sql);
-        $st->execute();
-        $theRow = $st->fetch(PDO::FETCH_ASSOC);
-        if(!$theRow) {
-            echo json_encode(
-                array('message' => 'author_id Not Found')
-            );
+            $auth = new Author( $conn );
+            $sql = 'SELECT * from authors where id = ' . $data->author_id;
+            $st = $conn->prepare($sql);
+            $st->execute();
+            $theRow = $st->fetch(PDO::FETCH_ASSOC);
+            echo $theRow;
+            if((!$theRow) && ($method == 'POST')) {
+                echo json_encode(
+                    array('message' => 'author_id Not Found')
+                );
+                die();
+            }
         } */
+        // end of change
     
 
 
