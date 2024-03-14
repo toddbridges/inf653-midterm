@@ -9,14 +9,23 @@
         exit();
     }
 
-    /* $data = json_decode(file_get_contents("php://input"));
-    if(empty($data->author)) {
+    // beginning of change
+    require_once '../../models/Author.php';
+    require_once '../../config/Database.php';
+    //$db = new Database();
+    // $conn = $db->connect();
+
+    $theData = json_decode(file_get_contents("php://input"));
+    
+
+    
+    if(($method == 'POST') && (!$theData->author)) {
         echo json_encode(
             array('message' => 'Missing Required Parameters')
         );
-        return;
-    } */
+    }
     
+
     
 
     if ($method == 'GET') {

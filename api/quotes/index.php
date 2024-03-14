@@ -35,6 +35,27 @@
     echo $data->quote . " is the quote";
     $data->author_id;
     $data->category_id; */
+
+
+        // beginning of change
+/*         require_once '../../models/Author.php';
+        require_once '../../config/Database.php';
+        $db = new Database();
+        $conn = $db->connect();
+    
+        $theData = json_decode(file_get_contents("php://input"));
+        $theData->id;
+    
+        $auth = new Author( $conn );
+        $sql = 'SELECT * from authors where id = ' . $theData->id;
+        $st = $conn->prepare($sql);
+        $st->execute();
+        $theRow = $st->fetch(PDO::FETCH_ASSOC);
+        if(!$theRow) {
+            echo json_encode(
+                array('message' => 'author_id Not Found')
+            );
+        } */
     
 
 
