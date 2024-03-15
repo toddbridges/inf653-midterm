@@ -12,7 +12,7 @@
 
 
         // beginning of change
-        require_once '../../models/Quote.php';
+/*         require_once '../../models/Quote.php';
         require_once '../../config/Database.php';
         $db = new Database();
         $conn = $db->connect();
@@ -33,7 +33,7 @@
                 );
                 die();
             }
-        }
+        } */
         // end of change
     
 
