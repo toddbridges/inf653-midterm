@@ -12,15 +12,16 @@
 
 
         // beginning of change
-/*         require_once '../../models/Author.php';
+        require_once '../../models/Quote.php';
         require_once '../../config/Database.php';
         $db = new Database();
         $conn = $db->connect();
     
         $data = json_decode(file_get_contents("php://input"));
+        
         if(isset($data->author_id)) {
     
-            $auth = new Author( $conn );
+            $quot = new Quote( $conn );
             $sql = 'SELECT * from authors where id = ' . $data->author_id;
             $st = $conn->prepare($sql);
             $st->execute();
@@ -32,7 +33,7 @@
                 );
                 die();
             }
-        } */
+        }
         // end of change
     
 
