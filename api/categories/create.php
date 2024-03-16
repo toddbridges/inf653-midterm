@@ -18,14 +18,13 @@ $category = new Category($db);
 //get raw category data
 $data = json_decode(file_get_contents("php://input"));
 
-//beginning of change
 if(empty($data->category)) {
     echo json_encode(
         array('message' => 'Missing Required Parameters')
     );
     return;
 }
-// end of change
+
 
 // $author->id = $data->id;       
 $category->category = $data->category;

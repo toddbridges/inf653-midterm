@@ -20,6 +20,13 @@ $author = new Author($db);
 //get raw author data
 $data = json_decode(file_get_contents("php://input"));
 
+if(empty($data->author)) {
+    echo json_encode(
+        array('message' => 'Missing Required Parameters')
+    );
+    return;
+}
+
 
 // $author->id = $data->id;       
 $author->author = $data->author;
