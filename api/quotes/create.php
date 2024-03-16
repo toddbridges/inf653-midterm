@@ -55,6 +55,6 @@ if($theNewId = $quote->create()) {
     );
 }else {
     echo json_encode(
-        array('message' => 'Quote not created')
+        array('message' => 'Missing Required Parameters')
     );
 }
